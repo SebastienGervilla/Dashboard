@@ -18,11 +18,11 @@
                     </div>
                     <nav class="header-nav">
                         <ul>
-                            <li><a href="index.html">Zone géograpique</a></li>
-                            <li><a href="pages/activity.html">Secteur d'activité</a></li>
-                            <li><a href="index.html">Taille d'entreprise</a></li>
-                            <li><a href="index.html">Date de création</a></li>
-                            <li><a href="index.html">Divers</a></li>
+                            <li><a href="index.php">Zone géograpique</a></li>
+                            <li><a href="pages/activity.php">Secteur d'activité</a></li>
+                            <li><a href="index.php">Taille d'entreprise</a></li>
+                            <li><a href="index.php">Date de création</a></li>
+                            <li><a href="index.php">Divers</a></li>
                         </ul>
                     </nav>
                 </div>

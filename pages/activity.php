@@ -8,6 +8,9 @@
     <title>Secteur d'activité</title>
 </head>
 <body>
+    <?php
+        include "../php/main.php"
+    ?>
     <section class="dashboard">
         <section class="header-area" id="header-area">
             <header>
@@ -18,11 +21,11 @@
                     </div>
                     <nav class="header-nav">
                         <ul>
-                            <li><a href="../index.html">Zone géograpique</a></li>
-                            <li><a href="pages/activity.html">Secteur d'activité</a></li>
-                            <li><a href="index.html">Taille d'entreprise</a></li>
-                            <li><a href="index.html">Date de création</a></li>
-                            <li><a href="index.html">Divers</a></li>
+                            <li><a href="../index.php">Zone géograpique</a></li>
+                            <li><a href="pages/activity.php">Secteur d'activité</a></li>
+                            <li><a href="index.php">Taille d'entreprise</a></li>
+                            <li><a href="index.php">Date de création</a></li>
+                            <li><a href="index.php">Divers</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -46,7 +49,30 @@
             </section>
             <section class="data-area">
                 <div class="data-content" id="data-content">
-                    
+                    <div class="number">
+                        <?php
+                            $altNum = array();
+                            foreach ($geoZones as $geoRow) {
+                                array_push($altNum, $geoRow[1]);
+                            }
+
+                            echo "
+                            <ul>
+                                <li><p>$altNum[1]</p></li>
+                                <li><p>$altNum[2]</p></li>
+                                <li><p>$altNum[3]</p></li>
+                                <li><p>$altNum[4]</p></li>
+                            </ul>"
+                        ?>
+                    </div>
+                    <div class="bar-chart">
+                        <div class="names">
+
+                        </div>
+                        <div class="bars">
+
+                        </div>
+                    </div>
                 </div>
             </section>
         </section>
