@@ -8,6 +8,7 @@
     <title>Dashboard</title>
 </head>
 <body>
+    <?php include "php/main.php"; ?>
     <section class="dashboard">
         <section class="header-area" id="header-area">
             <header>
@@ -53,11 +54,13 @@
                     </div>
                     <div class="data-row" id="alt-evo">
                         <img src="assets/arrondissements/alt_arr_evo.png" alt="">
+                            <?php
                     </div>
                 </div>
             </section>
         </section>
     </section>
     <script src="js/main.js"></script>
+    <script src="js/Charts.js"></script>
 </body>
 </html>

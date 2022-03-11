@@ -65,14 +65,7 @@
                             </ul>"
                         ?>
                     </div>
-                    <div class="bar-chart">
-                        <div class="names">
-
-                        </div>
-                        <div class="bars">
-
-                        </div>
-                    </div>
+                    
                 </div>
             </section>
         </section>

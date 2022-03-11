@@ -261,3 +261,57 @@ header {
     color: white;
     font-size: 1.5vw;
 }
+
+
+/* Geo Bar Chart */
+
+.bar-chart ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.bar-chart ul li {
+    display: flex;
+    height: 4vw;
+}
+
+.bar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    border-left: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.bar {
+    background-color: rgb(23, 97, 255);
+    height: 2vw;
+    padding-left: .4vw;
+    color: rgb(23, 97, 255);
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+.bar:hover {
+    background-color: rgb(57, 120, 255);
+    color: white;
+    transition: .2s ease;
+}
+
+.name {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 1.5vw;
+    width: 16vw;
+}
+
+.name p {
+    text-align: right;
+    font-size: 1.1vw;
+}
+
+.bar-chart-scale {
+    display: none;
+}
