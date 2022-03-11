@@ -47,14 +47,30 @@
             </section>
             <section class="data-area">
                 <div class="data-content" id="data-content">
-                    <div class="data-row" id="alt-per-year">
-                        <img src="assets/arrondissements/alt_arr_2018.png" alt="">
-                        <img src="assets/arrondissements/alt_arr_2019.png" alt="">
-                        <img src="assets/arrondissements/alt_arr_2020.png" alt="">
-                    </div>
-                    <div class="data-row" id="alt-evo">
-                        <img src="assets/arrondissements/alt_arr_evo.png" alt="">
+                <div class="bar-chart" id="geo-bar-chart">
+                        <ul>
                             <?php
+                                // $geoZones[1][1] = 3; Scale testing
+                                array_push($geoZones, ["Paris", 25]);
+                                foreach($geoZones as $geoRow) {
+                                    if ($geoRow[0] == "") {
+                                        continue;
+                                    }
+                                    $geoName = $geoRow[0];
+                                    $altNum = $geoRow[1];
+                                    echo 
+                                        "<li>
+                                            <div class='name'>
+                                                <p>$geoName</p>
+                                            </div>
+                                            <div class='bar-container'>
+                                                <div class='bar'>$altNum</div>
+                                            </div>
+                                        </li>";
+                                };
+                            ?>
+                        </ul>
+                        <div class="bar-chart-scale"></div>
                     </div>
                 </div>
             </section>
