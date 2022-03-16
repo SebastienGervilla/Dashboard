@@ -21,7 +21,7 @@
                         <ul>
                             <li><a href="index.php">Zone géograpique</a></li>
                             <li><a href="pages/activity.php">Secteur d'activité</a></li>
-                            <li><a href="index.php">Taille d'entreprise</a></li>
+                            <li><a href="pages/size.php">Taille d'entreprise</a></li>
                             <li><a href="index.php">Date de création</a></li>
                             <li><a href="index.php">Divers</a></li>
                         </ul>
@@ -48,35 +48,56 @@
             <section class="data-area">
                 <div class="data-content" id="data-content">
                 <div class="bar-chart" id="geo-bar-chart">
-                        <ul>
-                            <?php
-                                // $geoZones[1][1] = 3; Scale testing
-                                array_push($geoZones, ["Paris", 25]);
-                                foreach($geoZones as $geoRow) {
-                                    if ($geoRow[0] == "") {
-                                        continue;
-                                    }
-                                    $geoName = $geoRow[0];
-                                    $altNum = $geoRow[1];
-                                    echo 
-                                        "<li>
-                                            <div class='name'>
-                                                <p>$geoName</p>
-                                            </div>
-                                            <div class='bar-container'>
-                                                <div class='bar'>$altNum</div>
-                                            </div>
-                                        </li>";
-                                };
-                            ?>
+                    <div id="geo-chart-slices">
+                        <ul id="chart-slices-list">
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
                         </ul>
-                        <div class="bar-chart-scale"></div>
                     </div>
+                    <ul>
+                        <?php
+                            echo 
+                                "<li>
+                                    <div class='name'>
+                                    <p>Echelle : </p>
+                                    </div>
+                                    <div class='bar-chart-scale'>
+                                        <p>0</p>
+                                        <p>150</p>
+                                        <p>300</p>
+                                        <p>450</p>
+                                        <p>600</p>
+                                    </div>
+                                </li>";
+                            // $geoZones[1][1] = 3;
+                            // array_push($geoZones, ["Paris", 25]);
+                            foreach($geoZones as $geoRow) {
+                                if ($geoRow[0] == "") {
+                                    continue;
+                                }
+                                $geoName = $geoRow[0];
+                                $altNum = $geoRow[1];
+                                echo 
+                                    "<li>
+                                        <div class='name'>
+                                            <p>$geoName</p>
+                                        </div>
+                                        <div class='bar-container'>
+                                            <div class='bar'>$altNum</div>
+                                        </div>
+                                    </li>";
+                            };
+                        ?>
+                    </ul>
+                </div>
                 </div>
             </section>
         </section>
     </section>
     <script src="js/main.js"></script>
     <script src="js/Charts.js"></script>
+    <script type="text/javascript"> window.onload = setUpBarChart(); </script>
 </body>
 </html>

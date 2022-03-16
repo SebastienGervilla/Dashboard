@@ -37,6 +37,18 @@ a {
     text-decoration: none;
 }
 
+/* Charts */
+
+.size-chart {
+    display: flex;
+    justify-content: center;
+}
+
+#size-chart {
+    max-width: 25vw;
+    max-height: 25vw;
+}
+
 /* import poppins */
 
 .dashboard {
@@ -156,7 +168,7 @@ header {
     transform: scale(0, 1);
     width: 100%;
     height: 4px;
-    background-color: rgb(23, 97, 255);
+    background-color: rgb(25, 100, 255);
     transition: .2s ease;
 }
 
@@ -166,7 +178,7 @@ header {
 }
 
 #first-button::after {
-    background-color: orange;
+    background-color: rgb(255, 195, 0);
 }
 
 #second-button::after {
@@ -237,33 +249,66 @@ header {
 
 .number {
     width: 100%;
-    height: 8vw;
 }
 
 .number ul {
     display: flex;
-    justify-content: space-around;
-    width: 100%;
-    height: 100%;
+    flex-direction: column;
 }
 
-.number ul li {
+.number ul div {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 8vw;
+    margin-bottom: 4vw;
+}
+
+.number ul div li {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: rgb(23, 97, 255);
     border-radius: 8px;
-    width: 20%;
+    width: 17%;
     height: 100%;
 }
 
 .number ul li p {
+    text-align: center;
     color: white;
-    font-size: 1.5vw;
+    font-size: 1.3vw;
+    line-height: 2.5vw;
 }
 
 
+
+
 /* Geo Bar Chart */
+
+#geo-bar-chart {
+    position: relative;
+}
+
+#geo-chart-slices {
+    position: absolute;
+    width: 600px;
+    left: 17.5vw;
+    top: 0;
+}
+
+#chart-slices-list {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+#chart-slices-list li {
+    width: 25%;
+    height: 100%;
+    border-right: 1px solid rgb(0, 0, 0, .3);
+}
 
 .bar-chart ul {
     display: flex;
@@ -291,6 +336,7 @@ header {
     color: rgb(23, 97, 255);
     cursor: pointer;
     transition: .2s ease;
+    pointer-events: none;
 }
 
 .bar:hover {
@@ -313,5 +359,14 @@ header {
 }
 
 .bar-chart-scale {
-    display: none;
+    display: flex;
+    justify-content: space-between;
+    width: 750px;
+    height: 100%;
+    border-left: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.bar-chart-scale p {
+    width: 150px;
+    margin-left: .5vw;
 }

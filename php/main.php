@@ -4,8 +4,16 @@
     // "SELECT `Zone Géographique`, COUNT(`ALTERNANCES 2020`) FROM `bdd_stage` GROUP BY `Zone Géographique`  \n"
     // . "ORDER BY `COUNT(``ALTERNANCES 2020``)`  DESC;";
 
-    $query = "SELECT `Zone Géographique`, COUNT(`ALTERNANCES 2020`) FROM `bdd_stage` GROUP BY `Zone Géographique`;";
-    $request = $bdd->query($query);
+    $geoQuery = "SELECT `Zone Géographique`, COUNT(`ALTERNANCES 2020`) FROM `bdd_stage` GROUP BY `Zone Géographique`;";
+    $geoRequest = $bdd->query($geoQuery);
 
-    $geoZones = $request->fetchAll();
+    $actQuery = "SELECT `Secteur Activité`, COUNT(`ALTERNANCES 2020`) FROM `bdd_stage` GROUP BY `Secteur Activité`;";
+    $actRequest = $bdd->query($actQuery);
+
+    $sizeQuery = "SELECT `Taille de la structure`, COUNT(`ALTERNANCES 2020`) FROM `bdd_stage` GROUP BY `Taille de la structure`;";
+    $sizeRequest = $bdd->query($sizeQuery);
+
+    $geoZones = $geoRequest->fetchAll();
+    $activities = $actRequest->fetchAll();
+    $sizes = $sizeRequest->fetchAll();
 ?>
